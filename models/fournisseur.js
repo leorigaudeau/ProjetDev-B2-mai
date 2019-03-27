@@ -16,7 +16,14 @@ const fournisseur = new mongoose.Schema({
         type: String,
         required: true
     },
-    
+    telephone: {
+        type: String,
+        required: false
+    },
+    mail: {
+        type: String,
+        required: false
+    }
 });
 
 
