@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/leorigaudeau/ProjetDev/issues"
   },
-  "homepage": "https://github.com/leorigaudeau/ProjetDev#readme"
+  "homepage": "https://github.com/leorigaudeau/ProjetDev#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose-auto-increment": "^5.0.1"
+  }
 }
