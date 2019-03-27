@@ -10,7 +10,7 @@ const fournisseur = new mongoose.Schema({
     },
     description: {
         type: String,
-        required: flase
+        required: false
     },
     adresse: {
         type: String,
