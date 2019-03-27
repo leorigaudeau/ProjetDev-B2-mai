@@ -21,7 +21,7 @@ console.log('Nous disposons votre serveur sur le port:3000');
 app.listen(3000);
 
 // User routing---------------------------------------------------------------------------------------------
-app.post('/', (req, res) => {
+app.post('/user', (req, res) => {
     postUser(req,res);
  });
  app.get('/user',(req,res)=>{
