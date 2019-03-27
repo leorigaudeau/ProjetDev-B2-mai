@@ -4,11 +4,11 @@ autoIncrement.initialize(mongoose);
 
 
 const user = new mongoose.Schema({
-    Nom: {
+    nom: {
         type: String,
         required: true
     },
-    Password: {
+    password: {
         type: String,
         required:true
     }
