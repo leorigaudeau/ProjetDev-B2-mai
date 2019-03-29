@@ -18,7 +18,7 @@ const { delUser} =  require("./fonctionRecup/userFonction/del");
 //Routing-------------------------------------------------------------------------------------------------------
 app.use(bodyParser.json());
 
-app.get("/fournisseur",(req,res)=>{
+app.get("/",(req,res)=>{
     getFournisseur(req,res);
 });
 app.get("/fournisseur/:id",(req,res)=>{
