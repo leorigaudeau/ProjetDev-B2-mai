@@ -37,9 +37,6 @@ app.delete("/fournisseur/:id",(req,res)=>{
     deleteFournisseurById(req,res);
 });
 
-console.log('Nous disposons votre serveur sur le port:3000');
-const port = process.env.PORT || 3000
-app.listen();
 
 // User routing---------------------------------------------------------------------------------------------
 app.post('/user', (req, res) => {
@@ -57,3 +54,9 @@ app.post('/user', (req, res) => {
  app.delete('/user/:id',(req,res)=>{
      delUser(req,res);
  });
+
+ 
+
+console.log('Nous disposons votre serveur sur le port:3000');
+const port = process.env.PORT || 3000
+app.listen();
