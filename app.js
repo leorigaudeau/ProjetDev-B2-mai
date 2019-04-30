@@ -17,41 +17,45 @@ const { delUser} =  require("./fonctionRecup/userFonction/del");
 
 //Routing-------------------------------------------------------------------------------------------------------
 app.use(bodyParser.json());
-
-app.get("/fournisseur",(req,res)=>{
+app.all('/', function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "X-Requested-With");
+    next();
+   });
+app.get("/fournisseur",(req,res, next)=>{
     getFournisseur(req,res);
 });
-app.get("/fournisseur/:id",(req,res)=>{
+app.get("/fournisseur/:id",(req,res, next)=>{
     getFournisseurById(req,res);
 });
 
-app.post("/fournisseur",(req,res)=>{
+app.post("/fournisseur",(req,res, next)=>{
     postFournisseur(req,res);
 });
 
-app.put("/fournisseur/:id",(req,res)=>{
+app.put("/fournisseur/:id",(req,res, next)=>{
     updateFournisseurById(req,res);
 });
 
-app.delete("/fournisseur/:id",(req,res)=>{
+app.delete("/fournisseur/:id",(req,res, next)=>{
     deleteFournisseurById(req,res);
 });
 
 
 // User routing---------------------------------------------------------------------------------------------
-app.post('/user', (req, res) => {
+app.post('/user', (req, res, next) => {
     postUser(req,res);
  });
- app.get('/user',(req,res)=>{
+ app.get('/user',(req,res, next)=>{
      getUsers(req,res);
  });
- app.get('/user/:id',(req,res)=>{
+ app.get('/user/:id',(req,res, next)=>{
      getUserById(req,res);
  });
- app.put('/user/:id',(req,res)=>{
+ app.put('/user/:id',(req,res, next)=>{
      putUser(req,res);
  });
- app.delete('/user/:id',(req,res)=>{
+ app.delete('/user/:id',(req,res, next)=>{
      delUser(req,res);
  });
 
