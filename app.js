@@ -1,6 +1,6 @@
+const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
-const cors = require('cors');
 // Fournisseurs-----------------------------------------------
 const { Fournisseur } = require('./models/fournisseur'); 
 const { getFournisseur, getFournisseurById } =  require("./fonctionRecup/fournisseurFonction/get");
@@ -16,7 +16,7 @@ const { delUser} =  require("./fonctionRecup/userFonction/del");
 
 
 //Routing-------------------------------------------------------------------------------------------------------
-app.use(cors());
+app.use(bodyParser.json());
 app.all('/', function(req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "X-Requested-With");

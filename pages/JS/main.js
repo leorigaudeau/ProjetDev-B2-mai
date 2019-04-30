@@ -1,4 +1,9 @@
-$.getJSON("https://projetdev2019api.herokuapp.com/fournisseur?fbclid=IwAR1kddjk7twCduw2JPyGKCZvtELn1zZtV0aEwPqYir0ypGWqm7WnKrOua9E",
-function(data){
-    console.log(data);
-});
+"use strict"
+
+fetch("http://localhost:3000/fournisseur")
+    .then(function (resp) {
+        return resp.json();
+    })
+    .then(function (data) {
+        console.log(data);
+    });
