@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Raleway" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="../pages/css/style.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <div class="C1">
+        <div class="C2">
+            <div class="C2-1">
+                <h2>Modifier un fournisseur</h2>
+            </div>
+            <div class="C2-2">
+                <a href="./allfournisseur.html"><img class="return" src="./img/round-left-button.svg" alt="return"></a>
+                <form class="F1" action="../pages/JS/main.js" method="get">
+                    <div class="F1-1">
+                        <label for="Nom">Nom :</label>
+                        <label class="F1-1-Desc" for="Description">Description :</label>
+                        <label for="Adresse">Adresse :</label>
+                        <label for="Tel">Téléphone :</label>
+                        <label for="Mail">Mail :</label>
+                    </div>
+                    <div class="F1-2">
+                        <input type="text" name="Nom" id="Nom">
+                        <textarea class="F1-2-Desc" name="Description" id="Description" cols="30" rows="10"></textarea>
+                        <input type="text" name="Adresse" id="Adresse">
+                        <input type="tel" name="Tel" id="Tel">
+                        <input type="email" name="Mail" id="Mail">
+                    </div>
+                    <div class="F1-3">
+                        <input class="btnAjouter" type="submit" value="Modifier">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
